@@ -4,6 +4,11 @@ import * as Google from "expo-google-app-auth";
 import firebase from "firebase";
 
 export default class LoginScreen extends Component {
+   constructor(props) {
+    super(props);
+    this.state = {
+      fontsLoaded: true
+    };
   isUserEqual = (googleUser, firebaseUser) => {
     if (firebaseUser) {
       var providerData = firebaseUser.providerData;
